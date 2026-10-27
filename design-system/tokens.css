@@ -1,0 +1,59 @@
+/* GoW Design System — "Raw Can" tokens. See MASTER.md. */
+:root {
+  /* Colour */
+  --c-ink: #0b0b0b;
+  --c-paper: #f3efe6;
+  --c-white: #ffffff;
+  --c-signal: #ff3d00;
+  --c-acid: #d4ff00;
+  --c-muted: #4a4a4a;
+  --c-warning-bg: var(--c-ink);
+  --c-warning-fg: var(--c-white);
+
+  /* Type */
+  --ff-display: "Archivo Black", Impact, "Arial Black", sans-serif;
+  --ff-body: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ff-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --fs-mega: clamp(6rem, 28vw, 22rem);
+  --fs-h1: clamp(2rem, 7vw, 5.5rem);
+  --fs-h2: clamp(1.375rem, 4vw, 3rem);
+  --fs-h3: 1.375rem;
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  --lh-display: 0.9;
+  --lh-heading: 1;
+  --lh-body: 1.55;
+
+  /* Spacing (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --max-w: 1320px;
+
+  /* Shape */
+  --radius: 0;
+  --bw: 3px;
+  --bw-thick: 6px;
+  --shadow: 6px 6px 0 0 var(--c-ink);
+  --shadow-sm: 3px 3px 0 0 var(--c-ink);
+
+  /* Motion */
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Hit area */
+  --hit: 48px;
+}

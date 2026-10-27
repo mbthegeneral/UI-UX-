@@ -36,3 +36,22 @@ Inspired Claude UI IX Designer
     }
   ]
 }
+
+---
+
+## GoW Snus — Landingpage (Brutalism)
+
+| Pfad | Inhalt |
+|---|---|
+| `index.html` | Landingpage |
+| `design-system/MASTER.md` | Design-System: Farben, Typo, Spacing, Komponenten, Anti-Patterns |
+| `design-system/tokens.css` | Design-Tokens als CSS Custom Properties |
+| `assets/css/main.css` | Komponenten-Styles |
+| `assets/js/main.js` | Age-Gate, Mobile-Nav, Formular-Validierung |
+| `checks/predelivery.cjs` | Automatische UI/UX-Prüfung (Playwright) |
+| `checks/REPORT.md` | Ergebnis der letzten Prüfung |
+
+Ansehen: `index.html` im Browser öffnen (kein Build nötig).
+Prüfen: `node checks/predelivery.cjs [--shots ./shots]`
+
+**Hinweis:** Produktdaten (Nikotin 16 mg/g, 0,9 g, 20 Portionen, Geschmacksnoten) sind Platzhalter, bitte durch echte Werte ersetzen. Das Formular hat noch kein Backend.

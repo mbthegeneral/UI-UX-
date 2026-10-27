@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoW — Snus. Kein Schnickschnack.</title>
+  <meta name="description" content="GoW Snus: kräftig, trocken-würzig, ehrlich. Sorte, Stärke und Specs auf einen Blick. Nur für Erwachsene ab 18 Jahren.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="design-system/tokens.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <!-- Age gate -->
+  <dialog class="age-gate" id="age-gate" aria-labelledby="age-gate-title" aria-describedby="age-gate-desc">
+    <div class="age-gate__inner" data-state="ask">
+      <p class="label">Altersprüfung</p>
+      <h2 id="age-gate-title" class="age-gate__title">Bist du 18 oder älter?</h2>
+      <p id="age-gate-desc" class="age-gate__desc">Diese Seite zeigt ein Tabakerzeugnis und richtet sich ausschließlich an Erwachsene.</p>
+      <div class="age-gate__actions">
+        <button type="button" class="btn btn--primary" data-age="yes">Ja, ich bin 18+</button>
+        <button type="button" class="btn btn--secondary" data-age="no">Nein</button>
+      </div>
+    </div>
+    <div class="age-gate__inner" data-state="denied" hidden>
+      <p class="label">Kein Zugang</p>
+      <h2 class="age-gate__title">Sorry. Nicht für dich.</h2>
+      <p class="age-gate__desc">Tabak- und Nikotinprodukte sind erst ab 18 Jahren erlaubt.</p>
+    </div>
+  </dialog>
+
+  <!-- Health warning: fixed pattern, not dismissible -->
+  <div class="warning" role="note" aria-label="Gesundheitswarnung">
+    <p>Dieses Tabakerzeugnis schädigt Ihre Gesundheit und macht süchtig.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a class="logo" href="#top" aria-label="GoW Startseite">GoW<span class="logo__dot" aria-hidden="true"></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menü</span>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#sorte">Sorte</a></li>
+          <li><a href="#specs">Specs</a></li>
+          <li><a href="#anwendung">Anwendung</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="btn btn--primary btn--sm" href="#haendler">Händler finden</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="badge">Neue Sorte · White Portion</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="hero__mega">GoW</span>
+            <span class="hero__claim">Snus. Kein Schnickschnack.</span>
+          </h1>
+          <p class="hero__lead">Kräftig, trocken-würzig, ehrlich. Eine Sorte, eine Stärke, kein Marketing-Nebel. Nur das, was in der Dose ist.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#sorte">Sorte ansehen
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--secondary" href="#specs">Alle Specs</a>
+          </div>
+        </div>
+
+        <figure class="hero__can">
+          <svg class="can" viewBox="0 0 400 400" role="img" aria-labelledby="can-title">
+            <title id="can-title">GoW Snus-Dose, Draufsicht: schwarzer Deckel mit roter Banderole und Stärke 4 von 5</title>
+            <circle cx="200" cy="200" r="186" class="can__rim"/>
+            <circle cx="200" cy="200" r="160" class="can__lid"/>
+            <rect x="40" y="164" width="320" height="72" class="can__band"/>
+            <text x="200" y="218" text-anchor="middle" class="can__word">GoW</text>
+            <text x="200" y="112" text-anchor="middle" class="can__meta">WHITE PORTION · 20 STK</text>
+            <g class="can__dots" transform="translate(140 270)">
+              <rect x="0" y="0" width="18" height="18"/>
+              <rect x="26" y="0" width="18" height="18"/>
+              <rect x="52" y="0" width="18" height="18"/>
+              <rect x="78" y="0" width="18" height="18"/>
+              <rect x="104" y="0" width="18" height="18" class="is-empty"/>
+            </g>
+          </svg>
+          <figcaption class="label">Abb. 01 — Die Dose. Mehr nicht.</figcaption>
+        </figure>
+      </div>
+
+      <dl class="container hero__facts">
+        <div><dt>Stärke</dt><dd>4 / 5</dd></div>
+        <div><dt>Nikotin</dt><dd>16 mg/g</dd></div>
+        <div><dt>Portionen</dt><dd>20 Stk</dd></div>
+        <div><dt>Format</dt><dd>Slim White</dd></div>
+      </dl>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>GoW</span><span>Kräftig</span><span>Trocken</span><span>Würzig</span><span>Ehrlich</span><span>18+</span>
+        <span>GoW</span><span>Kräftig</span><span>Trocken</span><span>Würzig</span><span>Ehrlich</span><span>18+</span>
+      </div>
+    </div>
+
+    <!-- SORTE -->
+    <section class="section" id="sorte" aria-labelledby="sorte-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="label">02 — Die Sorte</p>
+          <h2 id="sorte-title" class="section__title">Eine Sorte.<br>Drei Noten.</h2>
+        </header>
+
+        <div class="grid-3">
+          <article class="card">
+            <p class="card__index" aria-hidden="true">A</p>
+            <h3 class="card__title">Tabak</h3>
+            <p>Dunkel fermentierter Tabak als Fundament. Erdig, leicht rauchig, ohne süßen Unterton.</p>
+          </article>
+          <article class="card card--signal">
+            <p class="card__index" aria-hidden="true">B</p>
+            <h3 class="card__title">Pfeffer</h3>
+            <p>Schwarzer Pfeffer im Antritt. Trocken, direkt, kurz scharf — dann ruhig.</p>
+          </article>
+          <article class="card">
+            <p class="card__index" aria-hidden="true">C</p>
+            <h3 class="card__title">Zeder</h3>
+            <p>Holzig-herbe Note im Abgang. Hält lange, wird nicht bitter.</p>
+          </article>
+        </div>
+
+        <div class="strength">
+          <h3 class="strength__title">Stärke</h3>
+          <div class="meter" role="img" aria-label="Stärke 4 von 5">
+            <span class="meter__cell is-on"></span>
+            <span class="meter__cell is-on"></span>
+            <span class="meter__cell is-on"></span>
+            <span class="meter__cell is-on"></span>
+            <span class="meter__cell"></span>
+          </div>
+          <p class="strength__note">Stark. Nicht für Einsteiger.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="section section--ink" id="specs" aria-labelledby="specs-title">
+      <div class="container specs">
+        <header class="section__head">
+          <p class="label">03 — Specs</p>
+          <h2 id="specs-title" class="section__title">Zahlen statt<br>Versprechen.</h2>
+        </header>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <caption class="visually-hidden">Technische Daten GoW Snus</caption>
+            <tbody>
+              <tr><th scope="row">Produkt</th><td>GoW Original</td></tr>
+              <tr><th scope="row">Typ</th><td>Snus, White Portion</td></tr>
+              <tr><th scope="row">Nikotin</th><td>16 mg/g</td></tr>
+              <tr><th scope="row">Portionsgewicht</th><td>0,9 g</td></tr>
+              <tr><th scope="row">Portionen / Dose</th><td>20</td></tr>
+              <tr><th scope="row">Nettogewicht</th><td>18 g</td></tr>
+              <tr><th scope="row">Format</th><td>Slim</td></tr>
+              <tr><th scope="row">Lagerung</th><td>Kühl, 2–8 °C</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANWENDUNG -->
+    <section class="section" id="anwendung" aria-labelledby="anwendung-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="label">04 — Anwendung</p>
+          <h2 id="anwendung-title" class="section__title">Drei Schritte.</h2>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title">Öffnen</h3>
+            <p>Deckel abdrehen, eine Portion nehmen. Deckelfach für gebrauchte Portionen nutzen.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title">Platzieren</h3>
+            <p>Unter die Oberlippe legen. Nicht kauen, nicht schlucken.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title">Entsorgen</h3>
+            <p>Nach Gebrauch ins Deckelfach, dann in den Restmüll. Nicht auf die Straße.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--rule" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <header class="section__head">
+          <p class="label">05 — FAQ</p>
+          <h2 id="faq-title" class="section__title">Fragen.</h2>
+        </header>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Was bedeutet „White Portion“?
+              <svg class="icon faq__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
+            </summary>
+            <p>Die Portionen sind nicht vorbefeuchtet. Dadurch tropfen sie weniger und der Geschmack baut sich langsamer auf.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Wie lagere ich GoW richtig?
+              <svg class="icon faq__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
+            </summary>
+            <p>Ungeöffnet im Kühlschrank (2–8 °C). Eine geöffnete Dose bei Zimmertemperatur innerhalb weniger Tage aufbrauchen.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Wo darf GoW verkauft werden?
+              <svg class="icon faq__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
+            </summary>
+            <p>Der Verkauf von Snus ist in vielen Ländern beschränkt. GoW wird nur dort angeboten, wo es gesetzlich erlaubt ist, und nur an Erwachsene ab 18 Jahren.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Ist Snus eine gesunde Alternative?
+              <svg class="icon faq__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>
+            </summary>
+            <p>Nein. Snus enthält Nikotin, macht stark abhängig und schädigt die Gesundheit. Wer nicht konsumiert, sollte nicht damit anfangen.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- HÄNDLER / FORM -->
+    <section class="section section--signal" id="haendler" aria-labelledby="haendler-title">
+      <div class="container cta">
+        <header class="section__head">
+          <p class="label">06 — Händler</p>
+          <h2 id="haendler-title" class="section__title">Sag uns, wo du bist.</h2>
+          <p class="cta__lead">Wir melden uns mit einem Händler in deiner Nähe — sofern der Verkauf dort erlaubt ist.</p>
+        </header>
+
+        <form class="form card" id="dealer-form" novalidate>
+          <div class="field">
+            <label for="f-email">E-Mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err">
+            <p class="field__error" id="f-email-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-zip">Postleitzahl</label>
+            <input id="f-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{4,5}" required aria-describedby="f-zip-err">
+            <p class="field__error" id="f-zip-err" aria-live="polite"></p>
+          </div>
+          <div class="field field--check">
+            <input id="f-age" name="age" type="checkbox" required aria-describedby="f-age-err">
+            <label for="f-age">Ich bestätige, dass ich mindestens 18 Jahre alt bin.</label>
+            <p class="field__error" id="f-age-err" aria-live="polite"></p>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Absenden
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <p class="site-footer__logo">GoW</p>
+      <nav aria-label="Rechtliches">
+        <ul class="site-footer__links">
+          <li><a href="#impressum">Impressum</a></li>
+          <li><a href="#datenschutz">Datenschutz</a></li>
+          <li><a href="#jugendschutz">Jugendschutz</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__legal">Nur für Erwachsene ab 18 Jahren. Kein Verkauf an Minderjährige. Snus enthält Nikotin, einen Stoff, der sehr stark abhängig macht.</p>
+      <p class="site-footer__copy label">© <span id="year">2026</span> GoW</p>
+    </div>
+  </footer>
+</body>
+</html>
